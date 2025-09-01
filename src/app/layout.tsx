@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "@/common/styles/frame.scss";
 import AntdClientProvider from '@/app/antdClientProvider'
-import {ConfigProvider} from 'antd';
-import zhCN from 'antd/locale/zh_CN';
 
 export const metadata: Metadata = {
   title: "My Next.js 15 App",
@@ -15,9 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ConfigProvider locale={zhCN}>
-          <AntdClientProvider>{children}</AntdClientProvider>
-        </ConfigProvider>
+        <AntdClientProvider>{children}</AntdClientProvider>
       </body>
     </html>
   );
