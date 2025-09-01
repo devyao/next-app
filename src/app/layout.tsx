@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/common/styles/frame.scss";
+import AntdClientProvider from '@/app/antdClientProvider'
 
 export const metadata: Metadata = {
   title: "My Next.js 15 App",
@@ -11,7 +12,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AntdClientProvider>{children}</AntdClientProvider>
+      </body>
     </html>
   );
 }
