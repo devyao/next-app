@@ -15,6 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <FakeError />
+        <p>{process.env.TEST_ENV}</p>
         <AntdClientProvider>{children}</AntdClientProvider>
       </body>
     </html>
