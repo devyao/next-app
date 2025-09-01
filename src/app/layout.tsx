@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/common/styles/frame.scss";
 import AntdClientProvider from '@/app/antdClientProvider'
+import FakeError from '@/components/fakeerror'
 
 export const metadata: Metadata = {
   title: "My Next.js 15 App",
@@ -13,6 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <FakeError />
         <AntdClientProvider>{children}</AntdClientProvider>
       </body>
     </html>
